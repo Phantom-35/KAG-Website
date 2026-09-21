@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kollegium | KAG Meckenheim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --school-blue: #1a4a7f;
+            --school-light: #f0f4f8;
+        }
+        .bg-school-primary { background-color: var(--school-blue); }
+        .text-school-primary { color: var(--school-blue); }
+        
+        /* Navigation & Dropdown */
+        .dropdown-menu { border: none; border-top: 3px solid var(--school-blue); min-width: 250px; }
+
+        /* Gruppenfoto Styling - Kompakt & Zentriert */
+        .img-container-compact {
+            max-width: 900px; /* Begrenzt die maximale Breite des Bildes */
+            margin: 0 auto;
+        }
+        .group-photo {
+            width: 100%;
+            height: auto;
+            max-height: 450px;
+            object-fit: cover;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        /* Lehrer-Karten */
+        .teacher-card {
+            border: none;
+            transition: all 0.3s ease;
+            background: #fff;
+            border-radius: 12px;
+        }
+        .teacher-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1) !important;
+        }
+        .teacher-img {
+            width: 70px;
+            height: 70px;
+            object-fit: cover;
+            border-radius: 50%;
+            background-color: var(--school-light);
+            border: 2px solid #fff;
+        }
+        .kuerzel {
+            font-size: 0.7rem;
+            color: #6c757d;
+            background: #f8f9fa;
+            padding: 2px 6px;
+            border-radius: 4px;
+            border: 1px solid #eee;
+            font-weight: bold;
+        }
+        .subject-badge {
+            font-size: 0.7rem;
+            padding: 0.4em 0.8em;
+            margin-right: 4px;
+            background-color: #e9ecef;
+            color: #495057;
+            border-radius: 20px;
+        }
+        .special-role {
+            border-left: 5px solid #0dcaf0 !important;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-school-primary sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-mortarboard-fill me-2"></i> KAG Meckenheim
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="schuleDropdown" role="button" data-bs-toggle="dropdown">Unsere Schule</a>
+                    <ul class="dropdown-menu shadow-lg mt-2">
+                        <li><h6 class="dropdown-header">Allgemeines</h6></li>
+                        <li><a class="dropdown-item" href="unsere-schule.html"><i class="bi bi-info-circle text-primary"></i> Übersicht & Profil</a></li>
+                        <li><a class="dropdown-item" href="schulprogramm.html"><i class="bi bi-file-earmark-text text-primary"></i> Schulprogramm</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Förderung & Beratung</h6></li>
+                        <li><a class="dropdown-item" href="foerdern-und-fordern.html"><i class="bi bi-magic text-primary"></i> Fördern & Fordern</a></li>
+                        <li><a class="dropdown-item" href="beratung-und-hilfe.html"><i class="bi bi-chat-dots text-primary"></i> Beratung & Hilfe</a></li>
+                        <li><a class="dropdown-item" href="gesunde-schule.html"><i class="bi bi-heart-pulse text-primary"></i> Gesunde Schule</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Aktivitäten</h6></li>
+                        <li><a class="dropdown-item" href="theater-xxl.html"><i class="bi bi-palette text-primary"></i> Theater XXL</a></li>
+                        <li><a class="dropdown-item" href="ags.html"><i class="bi bi-controller text-primary"></i> AGs</a></li>
+                        <li><a class="dropdown-item" href="fahrtenkonzept.html"><i class="bi bi-bus-front text-primary"></i> Fahrtenkonzept</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unterricht & Personen</a>
+                    <ul class="dropdown-menu shadow-lg border-0 mt-2">
+                        <li><h6 class="dropdown-header">Bildungsgänge</h6></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-book text-primary"></i> Erprobungsstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text text-primary"></i> Mittelstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard text-primary"></i> Oberstufe</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Menschen am KAG</h6></li>
+                        <li><a class="dropdown-item" href="schulleitung.html"><i class="bi bi-person-badge-fill text-primary"></i> Schulleitung</a></li>
+                        <li><a class="dropdown-item" href="sekretariat.html"><i class="bi bi-headset text-primary"></i> Sekretariat</a></li>
+                        <li><a class="dropdown-item" href="kollegium.html"><i class="bi bi-people-fill text-primary"></i> Kollegium</a></li>
+                        <li><a class="dropdown-item" href="sv.html"><i class="bi bi-backpack text-primary"></i> SV (Schülervertretung)</a></li>
+                        <li><a class="dropdown-item" href="förderverein.html"><i class="bi bi-hand-thumbs-up text-primary"></i> Förderverein</a></li>
+                        <li><a class="dropdown-item" href="schulpflegschaft.html"><i class="bi bi-person-video3 text-primary"></i> Schulpflegschaft</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Termine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="bg-white border-bottom py-5 mb-4 shadow-sm">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-school-primary">Unser Kollegium</h1>
+            <p class="lead text-muted">Gemeinsam für den Erfolg unserer Schülerinnen und Schüler.</p>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        
+        <div class="row mb-5">
+            <div class="col-12 text-center">
+                <div class="img-container-compact">
+                    <img src="picture-1600 (1).jpeg" class="group-photo" alt="Kollegiumsfoto">
+                    <p class="mt-3 text-muted small italic">Das Kollegium des KAG Meckenheim im aktuellen Schuljahr</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-10">
+                <div class="card p-4 shadow-sm border-0 bg-white" style="border-radius: 15px;">
+                    <div class="row g-3">
+                        <div class="col-md-8">
+                            <label class="form-label small fw-bold text-muted">Lehrkraft suchen</label>
+                            <div class="input-group">
+                                <span class="input-group-text bg-light border-0"><i class="bi bi-search"></i></span>
+                                <input type="text" id="searchInput" class="form-control bg-light border-0" placeholder="Name oder Kürzel eingeben...">
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <label class="form-label small fw-bold text-muted">Fach filtern</label>
+                            <select id="subjectFilter" class="form-select bg-light border-0">
+                                <option value="">Alle Fächer</option>
+                                <option value="Mathematik">Mathematik</option>
+                                <option value="Deutsch">Deutsch</option>
+                                <option value="Englisch">Englisch</option>
+                                <option value="Sport">Sport</option>
+                                <option value="Biologie">Biologie</option>
+                                <option value="Physik">Physik</option>
+                                <option value="Kunst">Kunst</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="teacherGrid" class="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
+            </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto text-center">
+        <div class="container">
+            <p class="small mb-0 opacity-50">© 2026 Konrad-Adenauer-Gymnasium Meckenheim</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        // DATENSATZ
+        const teachers = [
+            { name: "Dr. Müller", kuerzel: "MÜL", faecher: ["Mathematik", "Physik"], funktion: "" },
+            { name: "Frau Schmidt", kuerzel: "SMI", faecher: ["Deutsch", "Pädagogik"], funktion: "Beratungslehrerin" },
+            { name: "Herr Weber", kuerzel: "WEB", faecher: ["Sport", "Biologie"], funktion: "" },
+            { name: "Frau Fischer", kuerzel: "FIS", faecher: ["Englisch", "Kunst"], funktion: "" },
+            { name: "Herr Meyer", kuerzel: "MEY", faecher: ["Mathematik", "Informatik"], funktion: "IT-Beauftragter" },
+            { name: "Frau Wagner", kuerzel: "WAG", faecher: ["Deutsch", "Sport"], funktion: "SV-Lehrerin" },
+            // Hier einfach weitere Zeilen einfügen...
+        ];
+
+        const grid = document.getElementById('teacherGrid');
+        const search = document.getElementById('searchInput');
+        const filter = document.getElementById('subjectFilter');
+
+        function render(list) {
+            grid.innerHTML = '';
+            if(list.length === 0) {
+                grid.innerHTML = '<div class="col-12 text-center my-5 text-muted">Keine Ergebnisse gefunden.</div>';
+                return;
+            }
+            list.forEach(t => {
+                const card = `
+                    <div class="col">
+                        <div class="card h-100 teacher-card shadow-sm p-3 ${t.funktion ? 'special-role' : ''}">
+                            <div class="d-flex align-items-center">
+                                <img src="https://placehold.co/100x100/e9ecef/1a4a7f?text=${t.kuerzel}" class="teacher-img me-3">
+                                <div class="flex-grow-1">
+                                    <div class="d-flex justify-content-between align-items-start">
+                                        <h6 class="fw-bold mb-1">${t.name}</h6>
+                                        <span class="kuerzel">${t.kuerzel}</span>
+                                    </div>
+                                    ${t.funktion ? `<p class="small text-info fw-bold mb-1" style="font-size:0.75rem">${t.funktion}</p>` : ''}
+                                    <div class="mb-3 mt-2">
+                                        ${t.faecher.map(f => `<span class="badge subject-badge">${f}</span>`).join('')}
+                                    </div>
+                                    <a href="mailto:${t.name.split(' ').pop().toLowerCase()}@meckenheim-kag.com" class="text-decoration-none small text-primary">
+                                        <i class="bi bi-envelope-fill me-1"></i> E-Mail senden
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
+                grid.innerHTML += card;
+            });
+        }
+
+        function update() {
+            const term = search.value.toLowerCase();
+            const subject = filter.value;
+            const filtered = teachers.filter(t => {
+                const matchSearch = t.name.toLowerCase().includes(term) || t.kuerzel.toLowerCase().includes(term);
+                const matchSubject = subject === "" || t.faecher.includes(subject);
+                return matchSearch && matchSubject;
+            });
+            render(filtered);
+        }
+
+        search.addEventListener('input', update);
+        filter.addEventListener('change', update);
+        render(teachers);
+    </script>
+</body>
+</html>

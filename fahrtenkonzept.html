@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fahrtenkonzept | KAG Meckenheim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --school-blue: #1a4a7f;
+        }
+        .bg-school-primary { background-color: var(--school-blue); }
+        .text-school-primary { color: var(--school-blue); }
+        .btn-primary { background-color: var(--school-blue); border-color: var(--school-blue); }
+        
+        /* Dropdown Styling */
+        .dropdown-menu { border: none; border-top: 3px solid var(--school-blue); min-width: 280px; }
+        .dropdown-header { text-transform: uppercase; font-weight: 700; font-size: 0.75rem; color: #6c757d; padding: 0.75rem 1.25rem 0.4rem; }
+        
+        .fahrten-table thead {
+            background-color: var(--school-blue);
+            color: white;
+        }
+        .goal-card {
+            border: none;
+            background-color: #fff;
+            border-top: 4px solid var(--school-blue);
+        }
+        .finance-section {
+            background-color: #f8f9fa;
+            border-radius: 15px;
+            border: 1px solid #dee2e6;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-school-primary sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-mortarboard-fill me-2"></i> KAG Meckenheim
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="schuleDropdown" role="button" data-bs-toggle="dropdown">Unsere Schule</a>
+                    <ul class="dropdown-menu shadow-lg mt-2">
+                        <li><h6 class="dropdown-header">Allgemeines</h6></li>
+                        <li><a class="dropdown-item" href="unsere-schule.html"><i class="bi bi-info-circle text-primary"></i> Übersicht & Profil</a></li>
+                        <li><a class="dropdown-item" href="schulprogramm.html"><i class="bi bi-file-earmark-text text-primary"></i> Schulprogramm</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Förderung & Beratung</h6></li>
+                        <li><a class="dropdown-item" href="foerdern-und-fordern.html"><i class="bi bi-magic text-primary"></i> Fördern & Fordern</a></li>
+                        <li><a class="dropdown-item" href="beratung-und-hilfe.html"><i class="bi bi-chat-dots text-primary"></i> Beratung & Hilfe</a></li>
+                        <li><a class="dropdown-item" href="gesunde-schule.html"><i class="bi bi-heart-pulse text-primary"></i> Gesunde Schule</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Aktivitäten</h6></li>
+                        <li><a class="dropdown-item" href="theater-xxl.html"><i class="bi bi-palette text-primary"></i> Theater XXL</a></li>
+                        <li><a class="dropdown-item" href="ags.html"><i class="bi bi-controller text-primary"></i> AGs</a></li>
+                        <li><a class="dropdown-item" href="fahrtenkonzept.html"><i class="bi bi-bus-front text-primary"></i> Fahrtenkonzept</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unterricht & Personen</a>
+                    <ul class="dropdown-menu shadow-lg border-0 mt-2">
+                        <li><h6 class="dropdown-header">Bildungsgänge</h6></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-book text-primary"></i> Erprobungsstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text text-primary"></i> Mittelstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard text-primary"></i> Oberstufe</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Menschen am KAG</h6></li>
+                        <li><a class="dropdown-item" href="schulleitung.html"><i class="bi bi-person-badge-fill text-primary"></i> Schulleitung</a></li>
+                        <li><a class="dropdown-item" href="sekretariat.html"><i class="bi bi-headset text-primary"></i> Sekretariat</a></li>
+                        <li><a class="dropdown-item" href="kollegium.html"><i class="bi bi-people-fill text-primary"></i> Kollegium</a></li>
+                        <li><a class="dropdown-item" href="sv.html"><i class="bi bi-backpack text-primary"></i> SV (Schülervertretung)</a></li>
+                        <li><a class="dropdown-item" href="förderverein.html"><i class="bi bi-hand-thumbs-up text-primary"></i> Förderverein</a></li>
+                        <li><a class="dropdown-item" href="schulpflegschaft.html"><i class="bi bi-person-video3 text-primary"></i> Schulpflegschaft</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Termine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="bg-white border-bottom py-5 mb-5 shadow-sm">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-school-primary">Fahrtenkonzept</h1>
+            <p class="lead text-muted">Lernen an außerschulischen Lernorten am KAG</p>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        
+        <section class="mb-5">
+            <h2 class="fw-bold mb-4 text-school-primary text-center">Pädagogische Zielsetzung</h2>
+            <p class="lead text-center">Schulfahrten am KAG dienen der Ergänzung des Unterrichts und fördern die soziale Kompetenz sowie das Miteinander.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="card goal-card h-100 shadow-sm p-4 text-center">
+                        <i class="bi bi-people-fill text-primary fs-1 mb-3"></i>
+                        <h5 class="fw-bold">Integration</h5>
+                        <p class="text-secondary small mb-0">Stärkung der Klassengemeinschaft und Förderung des sozialen Lernens.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card goal-card h-100 shadow-sm p-4 text-center">
+                        <i class="bi bi-geo-alt-fill text-primary fs-1 mb-3"></i>
+                        <h5 class="fw-bold">Natur & Umwelt</h5>
+                        <p class="text-secondary small mb-0">Erkundung von Naturräumen und Sensibilisierung für ökologische Themen.</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card goal-card h-100 shadow-sm p-4 text-center">
+                        <i class="bi bi-bank text-primary fs-1 mb-3"></i>
+                        <h5 class="fw-bold">Politik & Kultur</h5>
+                        <p class="text-secondary small mb-0">Auseinandersetzung mit der europäischen Geschichte und Kultur.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <h3 class="fw-bold text-school-primary mb-4 text-center">Die Fahrten im Überblick</h3>
+            <div class="table-responsive shadow-sm rounded border">
+                <table class="table table-hover fahrten-table mb-0">
+                    <thead>
+                        <tr>
+                            <th class="py-3 ps-4">Jahrgang</th>
+                            <th class="py-3">Ziel / Art der Fahrt</th>
+                            <th class="py-3">Dauer</th>
+                            <th class="py-3">Ort</th>
+                            <th class="py-3">Inhaltlicher Fokus</th>
+                        </tr>
+                    </thead>
+                    <tbody class="bg-white text-secondary">
+                        <tr>
+                            <td class="py-3 ps-4 fw-bold text-dark">5</td>
+                            <td>Kennenlerntage</td>
+                            <td>3 Tage</td>
+                            <td>Merzbach</td>
+                            <td>Ankommen am KAG & Teambuilding</td>
+                            
+                        </tr>
+                        <tr>
+                            <td class="py-3 ps-4 fw-bold text-dark">6</td>
+                            <td>Erlebnispädagogik / Sport</td>
+                            <td>5 Tage</td>
+                            <td >Nordsee</td>
+                            <td>Kooperation & sportliche Aktivität</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 ps-4 fw-bold text-dark">8</td>
+                            <td>Kanu Fahrt</td>
+                            <td>3 Tage</td>
+                            <td>Worriken</td>
+                            <td>Sportliche Aktivität im Wasser</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 ps-4 fw-bold text-dark">10</td>
+                            <td>Studienfahrt</td>
+                            <td>5-7 Tage</td>
+                            <td >Berlin</td>
+                            <td>Erkundung der Hauptstadt</td>
+                        </tr>
+                        <tr>
+                            <td class="py-3 ps-4 fw-bold text-dark">EF & Q1</td>
+                            <td>Besinnungstage</td>
+                            <td>3 Tage</td>
+                            <td>Am KAG</td>
+                            <td>Reflexion & Abiturvorbereitung</td>
+                        </tr>
+                         <tr>
+                            <td class="py-3 ps-4 fw-bold text-dark">Q2</td>
+                            <td>Abschlussfahrt</td>
+                            <td>5 Tage</td>
+                            <td>Weitere Infos folgen</td>
+                            <td>Weitere Infos folgen</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="mb-5">
+            <div class="card border-0 bg-school-primary text-white p-4 p-md-5 rounded-4 shadow">
+                <div class="row align-items-center">
+                    <div class="col-md-8">
+                        <h3 class="fw-bold mb-3">Austauschprogramme</h3>
+                        <p class="mb-0">Neben den festen Klassenfahrten pflegen wir internationale Partnerschaften. Der Austausch ermöglicht das Eintauchen in fremde Kulturen und die Anwendung von Fremdsprachen im Alltag.</p>
+                    </div>
+                    <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                        <i class="bi bi-globe-europe-africa" style="font-size: 4rem; opacity: 0.4;"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="finance-section p-4 p-md-5 shadow-sm">
+            <div class="row align-items-center">
+                <div class="col-lg-1 d-none d-lg-block text-center">
+                    <i class="bi bi-wallet2 text-success fs-1"></i>
+                </div>
+                <div class="col-lg-11">
+                    <h4 class="fw-bold text-school-primary mb-3">Finanzierung & Unterstützung</h4>
+                    <p class="text-secondary">Wir legen Wert darauf, dass alle Schülerinnen und Schüler an unseren Fahrten teilnehmen können. Bei finanziellen Engpässen stehen verschiedene Fördermöglichkeiten zur Verfügung:</p>
+                    <ul class="text-secondary">
+                        <li>Leistungen über das <strong>Bildungs- und Teilhabepaket (BuT)</strong>.</li>
+                        <li>Unterstützung durch den <strong>schulinternen Sozialfonds</strong> des KAG.</li>
+                        <li>Individuelle Beratung durch die Schulleitung oder das Sekretariat.</li>
+                    </ul>
+                    <p class="small text-muted mb-0 fst-italic">Anfragen werden selbstverständlich streng vertraulich behandelt.</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-auto text-center">
+        <div class="container">
+            <h5 class="fw-bold mb-2">Konrad-Adenauer-Gymnasium Meckenheim</h5>
+            <p class="small text-white-50">Königsberger Straße 30 | 53340 Meckenheim</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

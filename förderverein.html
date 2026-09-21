@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Förderverein | KAG Meckenheim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --school-blue: #1a4a7f;
+        }
+        .bg-school-primary { background-color: var(--school-blue); }
+        .text-school-primary { color: var(--school-blue); }
+        .btn-primary { background-color: var(--school-blue); border-color: var(--school-blue); }
+        
+        .dropdown-menu { border: none; border-top: 3px solid var(--school-blue); min-width: 280px; }
+        .dropdown-header { text-transform: uppercase; font-weight: 700; font-size: 0.75rem; color: #6c757d; padding: 0.75rem 1.25rem 0.4rem; }
+        
+        /* Personenkarten (angepasst für Vorstand) */
+        .person-card {
+            border: none;
+            transition: transform 0.3s ease;
+            height: 100%; 
+        }
+        .person-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08) !important;
+        }
+        
+        
+        
+
+        .main-hero-img {
+            width: 100%;
+            max-width: 900px;
+            height: auto;
+            max-height: 400px; 
+            object-fit: cover;
+            border-radius: 20px;
+            background-color: #e9ecef;
+        }
+
+        .content-box {
+            background-color: #fff;
+            border: 1px solid #dee2e6;
+            border-radius: 1rem; 
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .fade-in-up {
+            animation: fadeInUp 1.2s ease-out;
+        }
+
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-school-primary sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-mortarboard-fill me-2"></i> KAG Meckenheim
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="schuleDropdown" role="button" data-bs-toggle="dropdown">Unsere Schule</a>
+                    <ul class="dropdown-menu shadow-lg mt-2">
+                        <li><h6 class="dropdown-header">Allgemeines</h6></li>
+                        <li><a class="dropdown-item" href="unsere-schule.html"><i class="bi bi-info-circle text-primary"></i> Übersicht & Profil</a></li>
+                        <li><a class="dropdown-item" href="schulprogramm.html"><i class="bi bi-file-earmark-text text-primary"></i> Schulprogramm</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Förderung & Beratung</h6></li>
+                        <li><a class="dropdown-item" href="foerdern-und-fordern.html"><i class="bi bi-magic text-primary"></i> Fördern & Fordern</a></li>
+                        <li><a class="dropdown-item" href="beratung-und-hilfe.html"><i class="bi bi-chat-dots text-primary"></i> Beratung & Hilfe</a></li>
+                        <li><a class="dropdown-item" href="gesunde-schule.html"><i class="bi bi-heart-pulse text-primary"></i> Gesunde Schule</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Aktivitäten</h6></li>
+                        <li><a class="dropdown-item" href="theater-xxl.html"><i class="bi bi-palette text-primary"></i> Theater XXL</a></li>
+                        <li><a class="dropdown-item" href="ags.html"><i class="bi bi-controller text-primary"></i> AGs</a></li>
+                        <li><a class="dropdown-item" href="fahrtenkonzept.html"><i class="bi bi-bus-front text-primary"></i> Fahrtenkonzept</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unterricht & Personen</a>
+                    <ul class="dropdown-menu shadow-lg border-0 mt-2">
+                        <li><h6 class="dropdown-header">Bildungsgänge</h6></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-book text-primary"></i> Erprobungsstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text text-primary"></i> Mittelstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard text-primary"></i> Oberstufe</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Menschen am KAG</h6></li>
+                        <li><a class="dropdown-item" href="schulleitung.html"><i class="bi bi-person-badge-fill text-primary"></i> Schulleitung</a></li>
+                        <li><a class="dropdown-item" href="sekretariat.html"><i class="bi bi-headset text-primary"></i> Sekretariat</a></li>
+                        <li><a class="dropdown-item" href="kollegium.html"><i class="bi bi-people-fill text-primary"></i> Kollegium</a></li>
+                        <li><a class="dropdown-item" href="sv.html"><i class="bi bi-backpack text-primary"></i> SV (Schülervertretung)</a></li>
+                        <li><a class="dropdown-item" href="förderverein.html"><i class="bi bi-hand-thumbs-up text-primary"></i> Förderverein</a></li>
+                        <li><a class="dropdown-item" href="schulpflegschaft.html"><i class="bi bi-person-video3 text-primary"></i> Schulpflegschaft</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Termine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="bg-white border-bottom py-5 mb-5 shadow-sm">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-school-primary">Förderverein des KAG</h1>
+            <p class="lead text-muted">Unterstützung für Bildung und Gemeinschaft seit 1969</p>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+
+        <div class="row mb-5 justify-content-center">
+            <div class="col-lg-10 text-center">
+                <img src="förder.png" class="main-hero-img shadow-lg fade-in-up mb-4" alt="Förderverein Bild">
+                <div class="mt-4" style="max-width: 800px; margin: 0 auto;">
+                    <h3 class="fw-bold text-school-primary">Herzlich Willkommen!</h3>
+                    <p class="lead">Ziel des Vereins ist die Unterstützung des Konrad-Adenauer-Gymnasiums durch die Beschaffung von zusätzlichen Lehrmitteln, die Finanzierung von Schulpreisen und Zuschüsse für Projekte.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12 text-center mb-3">
+                <h4 class="text-secondary fw-bold text-uppercase small">Der Vorstand stellt sich vor</h4>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5 justify-content-center">
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card person-card shadow-sm p-4 text-center">
+            <h6 class="fw-bold text-school-primary mb-1">Anja von Perfall</h6>
+            <p class="text-muted small mb-0">Erste Vorsitzende</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card person-card shadow-sm p-4 text-center">
+            <h6 class="fw-bold text-school-primary mb-1">Conny Fink-Grell</h6>
+            <p class="text-muted small mb-0">Zweite Vorsitzende</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card person-card shadow-sm p-4 text-center">
+            <h6 class="fw-bold text-school-primary mb-1">Andrea Soboll</h6>
+            <p class="text-muted small mb-0">Kassenwartin</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card person-card shadow-sm p-4 text-center">
+            <h6 class="fw-bold text-school-primary mb-1">Bernd Kögel</h6>
+            <p class="text-muted small mb-0">Schriftführer</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card person-card shadow-sm p-4 text-center">
+            <h6 class="fw-bold text-school-primary mb-1">Janina Kiermas</h6>
+            <p class="text-muted small mb-0">Schulpflegschaft</p>
+        </div>
+    </div>
+    <div class="col-6 col-md-4 col-lg-2">
+        <div class="card person-card shadow-sm p-4 text-center">
+            <h6 class="fw-bold text-school-primary mb-1">Dirk Bahrouz</h6>
+            <p class="text-muted small mb-0">Schulleiter</p>
+        </div>
+    </div>
+</div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-lg-6">
+                <div class="content-box shadow-sm rounded-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-stars fs-2 text-school-primary me-3"></i>
+                        <h4 class="fw-bold mb-0">Aktuelle Projekte</h4>
+                    </div>
+                    <p class="text-muted mb-4">Dank unserer über 500 Mitglieder können wir vielfältige Maßnahmen unterstützen:</p>
+                    <ul class="list-group list-group-flush border-0">
+                        <li class="list-group-item border-0 px-0"><i class="bi bi-music-note-beamed text-primary me-2"></i>Restaurierung des Flügels & Musikinstrumente</li>
+                        <li class="list-group-item border-0 px-0"><i class="bi bi-laptop text-primary me-2"></i>Software-Lizenzen (MatheGym, Adobe) & Tablets</li>
+                        <li class="list-group-item border-0 px-0"><i class="bi bi-palette text-primary me-2"></i>Nähmaschinen für Theater XXL</li>
+                        <li class="list-group-item border-0 px-0"><i class="bi bi-flask text-primary me-2"></i>Biologie-Experimentierkoffer & Chemie-Ausstattung</li>
+                        <li class="list-group-item border-0 px-0"><i class="bi bi-heart-pulse text-primary me-2"></i>Erste-Hilfe-Kurse für Schüler</li>
+                        <li class="list-group-item border-0 px-0"><i class="bi bi-journal-check text-primary me-2"></i>Ausgabe des "Blickpunkt Schule"</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="content-box shadow-sm rounded-4 h-100">
+                    <div class="d-flex align-items-center mb-3">
+                        <i class="bi bi-clock-history fs-2 text-school-primary me-3"></i>
+                        <h4 class="fw-bold mb-0">Geschichte des Vereins</h4>
+                    </div>
+                    <p>Der Förderverein ist untrennbar mit der Geschichte des Gymnasiums verbunden. <strong>Gegründet im August 1969</strong>, kurz nach Aufnahme des Schulbetriebs, blicken wir auf über 45 Jahre zurück.</p>
+                    <p>In dieser Zeit haben wir Vieles ermöglicht:</p>
+                    <ul>
+                        <li>Förderung der Jugendbücherei</li>
+                        <li>Ausstattung für den Schulsanitätsdienst</li>
+                        <li>"Chill und Action Area" auf dem Schulcampus</li>
+                        <li>Zuschüsse zu Klassenfahrten</li>
+                        <li>Unterstützung aller Fachschaften (Sport, Musik, Informatik etc.)</li>
+                    </ul>
+                    <p class="small text-muted fst-italic mt-3">Ein besonderer Dank gilt dem Engagement der bisherigen Vorstände und unseren treuen Mitgliedern.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mt-5">
+            <div class="col-12 text-center">
+                <div class="bg-white p-5 rounded-4 border shadow-sm" style="max-width: 800px; margin: 0 auto;">
+                    <i class="bi bi-people-fill fs-1 text-school-primary mb-3"></i>
+                    <h3 class="fw-bold">Werden Sie Teil unserer Gemeinschaft!</h3>
+                    <p class="mb-4 text-muted">
+                        Nur mit Ihrer Hilfe können wir auch weiterhin unsere Kinder wirkungsvoll unterstützen. Sprechen Sie auch gerne Eltern anderer Schüler oder Freunde an.
+                    </p>
+                    
+                    <div class="d-flex justify-content-center gap-3 flex-wrap mt-4">
+                        <a href="Beitrittsformular SEPA_einseitig.pdf" download="Beitrittsformular einseitig" class="btn btn-primary btn-lg rounded-pill px-4">
+                            <i class="bi bi-file-earmark-arrow-down me-2"></i>Beitrittsformular (einseitig)
+                        </a>
+                        <a href="Vereinssatzung.pdf" download="Satzung" class="btn btn-outline-primary btn-lg rounded-pill px-4">
+                            <i class="bi bi-file-earmark-text me-2"></i>Satzung
+                        </a>
+                    </div>
+                    
+                    <div class="mt-4 pt-3 border-top">
+                        <p class="small text-muted mb-2">Weitere Dokumente:</p>
+                        <a href="Beitrittsformular SEPA_doppelt.pdf" download="Beitrittsformular SEPA_doppelt" class="text-decoration-none me-3 small"><i class="bi bi-download me-1"></i>Beitrittsformular (doppelt)</a>
+                        <a href="flyer.pdf" download="flyer" class="text-decoration-none me-3 small"><i class="bi bi-info-circle me-1"></i>Informationsflyer</a>
+                        <a href="Datenschutzhinweis.pdf" download="Datenschutzbestimmungen" class="text-decoration-none small"><i class="bi bi-shield-lock me-1"></i>Datenschutzbestimmungen</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-4 mt-auto text-center">
+        <div class="container">
+            <p class="small mb-0 opacity-50">© 2026 Konrad-Adenauer-Gymnasium Meckenheim</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

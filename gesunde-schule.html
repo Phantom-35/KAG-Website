@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gesunde Schule | KAG Meckenheim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root { --school-blue: #1a4a7f; --health-green: #2d7a45; }
+        .bg-school-primary { background-color: var(--school-blue); }
+        .text-school-primary { color: var(--school-blue); }
+        .btn-primary { background-color: var(--school-blue); border-color: var(--school-blue); }
+        
+        .dropdown-menu { border: none; border-top: 3px solid var(--school-blue); min-width: 280px; }
+        .dropdown-header { text-transform: uppercase; font-weight: 700; font-size: 0.75rem; color: #6c757d; padding: 0.75rem 1.25rem 0.4rem; }
+        .dropdown-item i { width: 1.5rem; margin-right: 0.5rem; }
+
+        .concept-card { border: none; border-left: 5px solid var(--health-green); background: #fff; transition: 0.3s; }
+        .concept-card:hover { transform: translateX(5px); box-shadow: 0 5px 15px rgba(0,0,0,0.08); }
+        .baustein-badge { background-color: var(--health-green); color: white; padding: 0.4rem 0.8rem; border-radius: 20px; font-size: 0.85rem; }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-school-primary sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-mortarboard-fill me-2"></i> KAG Meckenheim
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="schuleDropdown" role="button" data-bs-toggle="dropdown">Unsere Schule</a>
+                    <ul class="dropdown-menu shadow-lg mt-2">
+                        <li><h6 class="dropdown-header">Allgemeines</h6></li>
+                        <li><a class="dropdown-item" href="unsere-schule.html"><i class="bi bi-info-circle text-primary"></i> Übersicht & Profil</a></li>
+                        <li><a class="dropdown-item" href="schulprogramm.html"><i class="bi bi-file-earmark-text text-primary"></i> Schulprogramm</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Förderung & Beratung</h6></li>
+                        <li><a class="dropdown-item" href="foerdern-und-fordern.html"><i class="bi bi-magic text-primary"></i> Fördern & Fordern</a></li>
+                        <li><a class="dropdown-item" href="beratung-und-hilfe.html"><i class="bi bi-chat-dots text-primary"></i> Beratung & Hilfe</a></li>
+                        <li><a class="dropdown-item" href="gesunde-schule.html"><i class="bi bi-heart-pulse text-primary"></i> Gesunde Schule</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Aktivitäten</h6></li>
+                        <li><a class="dropdown-item" href="theater-xxl.html"><i class="bi bi-palette text-primary"></i> Theater XXL</a></li>
+                        <li><a class="dropdown-item" href="ags.html"><i class="bi bi-controller text-primary"></i> AGs</a></li>
+                        <li><a class="dropdown-item" href="fahrtenkonzept.html"><i class="bi bi-bus-front text-primary"></i> Fahrtenkonzept</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unterricht & Personen</a>
+                    <ul class="dropdown-menu shadow-lg border-0 mt-2">
+                        <li><h6 class="dropdown-header">Bildungsgänge</h6></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-book text-primary"></i> Erprobungsstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text text-primary"></i> Mittelstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard text-primary"></i> Oberstufe</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Menschen am KAG</h6></li>
+                        <li><a class="dropdown-item" href="schulleitung.html"><i class="bi bi-person-badge-fill text-primary"></i> Schulleitung</a></li>
+                        <li><a class="dropdown-item" href="sekretariat.html"><i class="bi bi-headset text-primary"></i> Sekretariat</a></li>
+                        <li><a class="dropdown-item" href="kollegium.html"><i class="bi bi-people-fill text-primary"></i> Kollegium</a></li>
+                        <li><a class="dropdown-item" href="sv.html"><i class="bi bi-backpack text-primary"></i> SV (Schülervertretung)</a></li>
+                        <li><a class="dropdown-item" href="förderverein.html"><i class="bi bi-hand-thumbs-up text-primary"></i> Förderverein</a></li>
+                        <li><a class="dropdown-item" href="schulpflegschaft.html"><i class="bi bi-person-video3 text-primary"></i> Schulpflegschaft</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Termine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="bg-white border-bottom py-5 mb-5 shadow-sm">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold text-school-primary mb-3 text-center">Gesunde Schule</h1>
+                    <p class="lead text-secondary text-center">Das Konzept „Gesunde Schule“ am KAG verfolgt das Ziel, unterschiedliche Themen gesundheitsbezogenen Verhaltens fest in den Schulalltag zu integrieren.</p>
+                </div>
+                <div class="col-lg-4 text-center d-none d-lg-block text-center">
+                    <i class="bi bi-heart-pulse text-danger" style="font-size: 6rem; opacity: 0.2;"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        
+        <section class="mb-5">
+            <div class="row align-items-center bg-white rounded shadow-sm g-0 overflow-hidden">
+                <div class="col-md-4 bg-school-primary p-5 text-white text-center">
+                    <i class="bi bi-activity mb-3" style="font-size: 4rem;"></i>
+                    <h2 class="fw-bold">Gesund & Fit</h2>
+                    <p>Das neue Unterrichtsfach in Klasse 8</p>
+                </div>
+                <div class="col-md-8 p-4 p-lg-5">
+                    <h3 class="fw-bold text-school-primary mb-4">Das Konzept</h3>
+                    <p>Über den Biologieunterricht hinaus erfahren unsere Schülerinnen und Schüler im Fach <strong>„Gesund und Fit“</strong> Grundlagen für Prävention und Gesundheitsbewusstsein. Erfolgversprechend sind hierbei Programme zur Förderung von Lebenskompetenzen.</p>
+                    <div class="d-flex flex-wrap gap-2 mt-4">
+                        <span class="baustein-badge"><i class="bi bi-check2-circle me-1"></i> Mediennutzung</span>
+                        <span class="baustein-badge"><i class="bi bi-check2-circle me-1"></i> Alkoholprävention</span>
+                        <span class="baustein-badge"><i class="bi bi-check2-circle me-1"></i> Ernährungsstrategien</span>
+                        <span class="baustein-badge"><i class="bi bi-check2-circle me-1"></i> Kopfschmerzprävention</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <h3 class="fw-bold text-school-primary mb-4">Themenschwerpunkte</h3>
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card h-100 concept-card shadow-sm p-4">
+                    <h5 class="fw-bold"><i class="bi bi-phone me-2"></i> Mediennutzung</h5>
+                    <p class="small text-secondary mb-0">Die Selbstreflexion des eigenen Verhaltens steht im Mittelpunkt. Schüler lernen, Gefahren zu erkennen und einen emanzipierten Umgang mit digitalen Medien zu entwickeln.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 concept-card shadow-sm p-4">
+                    <h5 class="fw-bold"><i class="bi bi-ban me-2"></i> Alkoholprävention</h5>
+                    <p class="small text-secondary mb-0">Durch interaktive Vermittlungsstile werden Verhaltensmuster eingeübt, um die Lebenskompetenz und Widerstandsfähigkeit zu stärken.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 concept-card shadow-sm p-4">
+                    <h5 class="fw-bold"><i class="bi bi-egg-fried me-2"></i> Ernährungsstrategien</h5>
+                    <p class="small text-secondary mb-0">Wir fördern Kompetenzen und Haltungen für ein selbstbestimmtes, gesundes Leben. Hierzu zählt auch der Aufbau einer gesundheitsfördernden Verpflegung.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 concept-card shadow-sm p-4">
+                    <h5 class="fw-bold"><i class="bi bi-headset me-2"></i> Kopfschmerzprävention</h5>
+                    <p class="small text-secondary mb-0">Stärkung des Vertrauens in die eigene Möglichkeit, aktiv etwas für die Gesundheit zu tun und Stressfaktoren abzubauen.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg-12">
+                <div class="p-4 bg-white border rounded shadow-sm border-start border-4 border-primary">
+                    <h4 class="fw-bold text-school-primary mb-3"><i class="bi bi-basket me-2"></i>Lebensmittelversorgung</h4>
+                    <p class="mb-0 text-secondary">Ein überschaubares Angebot an Getränken und Snacks steht den Schülerinnen und Schülern an Automaten zur Verfügung. Wir arbeiten kontinuierlich am Ausbau einer gesundheitsfördernden Versorgung im Vormittagsbereich.</p>
+                </div>
+            </div>
+        </div>
+
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-auto text-center">
+        <div class="container">
+            <h5 class="fw-bold mb-2">Konrad-Adenauer-Gymnasium Meckenheim</h5>
+            <p class="small text-white-50">Königsberger Straße 30 | 53340 Meckenheim</p>
+            <div class="small text-white-50">
+                <a href="#" class="text-white-50 text-decoration-none mx-2">Impressum</a> | 
+                <a href="#" class="text-white-50 text-decoration-none mx-2">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

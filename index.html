@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KAG Meckenheim | Startseite</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root {
+            --school-blue: #1a4a7f;
+        }
+        .bg-school-primary { background-color: var(--school-blue); }
+        .text-school-primary { color: var(--school-blue); }
+        .btn-primary { background-color: var(--school-blue); border-color: var(--school-blue); }
+        .btn-primary:hover { background-color: #143a63; border-color: #143a63; }
+
+        .hero-section {
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url(neubau.jpeg);
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 0;
+        }
+
+        .dropdown-menu {
+            border: none;
+            border-top: 3px solid var(--school-blue);
+            min-width: 280px;
+        }
+        .dropdown-header {
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            font-weight: 700;
+            font-size: 0.75rem;
+            color: #6c757d;
+            padding: 0.75rem 1.25rem 0.4rem;
+        }
+        .dropdown-item i {
+            width: 1.5rem;
+            margin-right: 0.5rem;
+        }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-school-primary sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-mortarboard-fill me-2"></i> KAG Meckenheim
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="schuleDropdown" role="button" data-bs-toggle="dropdown">Unsere Schule</a>
+                    <ul class="dropdown-menu shadow-lg mt-2">
+                        <li><h6 class="dropdown-header">Allgemeines</h6></li>
+                        <li><a class="dropdown-item" href="unsere-schule.html"><i class="bi bi-info-circle text-primary"></i> Übersicht & Profil</a></li>
+                        <li><a class="dropdown-item" href="schulprogramm.html"><i class="bi bi-file-earmark-text text-primary"></i> Schulprogramm</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Förderung & Beratung</h6></li>
+                        <li><a class="dropdown-item" href="foerdern-und-fordern.html"><i class="bi bi-magic text-primary"></i> Fördern & Fordern</a></li>
+                        <li><a class="dropdown-item" href="beratung-und-hilfe.html"><i class="bi bi-chat-dots text-primary"></i> Beratung & Hilfe</a></li>
+                        <li><a class="dropdown-item" href="gesunde-schule.html"><i class="bi bi-heart-pulse text-primary"></i> Gesunde Schule</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Aktivitäten</h6></li>
+                        <li><a class="dropdown-item" href="theater-xxl.html"><i class="bi bi-palette text-primary"></i> Theater XXL</a></li>
+                        <li><a class="dropdown-item" href="ags.html"><i class="bi bi-controller text-primary"></i> AGs</a></li>
+                        <li><a class="dropdown-item" href="fahrtenkonzept.html"><i class="bi bi-bus-front text-primary"></i> Fahrtenkonzept</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unterricht & Personen</a>
+                    <ul class="dropdown-menu shadow-lg border-0 mt-2">
+                        <li><h6 class="dropdown-header">Bildungsgänge</h6></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-book text-primary"></i> Erprobungsstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text text-primary"></i> Mittelstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard text-primary"></i> Oberstufe</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Menschen am KAG</h6></li>
+                        <li><a class="dropdown-item" href="schulleitung.html"><i class="bi bi-person-badge-fill text-primary"></i> Schulleitung</a></li>
+                        <li><a class="dropdown-item" href="sekretariat.html"><i class="bi bi-headset text-primary"></i> Sekretariat</a></li>
+                        <li><a class="dropdown-item" href="kollegium.html"><i class="bi bi-people-fill text-primary"></i> Kollegium</a></li>
+                        <li><a class="dropdown-item" href="sv.html"><i class="bi bi-backpack text-primary"></i> SV (Schülervertretung)</a></li>
+                        <li><a class="dropdown-item" href="förderverein.html"><i class="bi bi-hand-thumbs-up text-primary"></i> Förderverein</a></li>
+                        <li><a class="dropdown-item" href="schulpflegschaft.html"><i class="bi bi-person-video3 text-primary"></i> Schulpflegschaft</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Termine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="hero-section text-center mb-5">
+        <div class="container">
+            <h1 class="display-3 fw-bold">Herzlich Willkommen</h1>
+            <p class="lead mb-0 fs-4">am Konrad-Adenauer-Gymnasium Meckenheim</p>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        
+        <div class="row mb-5">
+            <div class="col-12">
+                <div class="alert alert-primary border-0 shadow-sm d-flex align-items-center p-4" role="alert">
+                    <div class="bg-white p-3 rounded-circle text-primary me-4 shadow-sm d-none d-md-block">
+                        <i class="bi bi-calendar-check-fill fs-2"></i>
+                    </div>
+                    <div>
+                        <h4 class="alert-heading fw-bold mb-1">Voranmeldung für das neue Schuljahr</h4>
+                        <p class="mb-0 fs-5">Die Anmeldung ist ab sofort möglich. Bitte nutzen Sie diesen Link <a href="#" class="fw-bold text-decoration-underline">https://t1p.de/Anmeldung-KAG</a>.</p>
+                        <p class="mb-0 mt-2 fs-5">Die ausgefüllte Datenschutzerklärung und die Schweigepflichtsentbindung bringen Sie bitte erst zum Beratungsgespräch im Februar mit. 
+                            Das Buchungstool für die Terminauswahl stellen wir im Januar online.</p>
+                        <p class="mb-2 fs-5 text-center"><a href="#" class="fw-bold">Datenschutz</a></p>
+                        <p class="mb-2 fs-5 text-center"><a href="#" class="fw-bold">Schweigepflichtsentbindung</a></p>
+                        </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row mb-4">
+            <div class="col-12">
+                <h2 class="fw-bold text-school-primary border-bottom pb-2 text-center">Aktuelles</h2>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                    <img src="https://placehold.co/600x350?text=Theater+XXL+Bühne" class="card-img-top" alt="Theater" style="height: 250px; object-fit: cover;">
+                    <div class="card-body p-4">
+                        <div class="d-flex justify-content-between align-items-center mb-2">
+                            <span class="badge bg-danger">Highlight 2026</span>
+                        </div>
+                        <h3 class="card-title fw-bold text-school-primary">Theater XXL: Lysistrata</h3>
+                        <p class="card-text text-secondary">Ein außergewöhnliches Theaterprojekt frei nach Aristophanes. Erfahren Sie alles über Proben und Termine.</p>
+                        <a href="#" class="btn btn-outline-primary">Mehr Informationen</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="card border-0 shadow-sm h-100 overflow-hidden">
+                    <img src="https://placehold.co/600x350?text=Schul-Kunst" class="card-img-top" alt="Kunstwerk" style="height: 250px; object-fit: cover;">
+                    <div class="card-body p-4 bg-white">
+                        <h3 class="card-title fw-bold text-school-primary">Schul-Kunst</h3>
+                        <p class="card-text text-secondary"><strong>Wimmelbild in Meckenheim:</strong> Ein Gemeinschaftsprojekt von Lara, Jenni und Sanja aus dem Januar 2026.</p>
+                        <a href="#" class="btn btn-outline-primary">Zur Galerie</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row g-4 mb-5">
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm text-bg-dark">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-white"><i class="bi bi-file-earmark-pdf text-danger me-2"></i>Aktueller Newsletter</h5>
+                        <p class="text-white-50 small mb-3">Ausgabe Nr. 3 vom 11. Januar 2026.</p>
+                        <a href="#" class="btn btn-primary w-100">PDF Lesen</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card h-100 border-0 shadow-sm text-bg-dark">
+                    <div class="card-body p-4">
+                        <h5 class="fw-bold text-white"><i class="bi bi-envelope me-2 text-primary"></i>Newsletter abonnieren</h5>
+                        <form class="d-flex gap-2">
+                            <input type="email" class="form-control" placeholder="E-Mail-Adresse">
+                            <button type="submit" class="btn btn-primary">Anmelden</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <div class="card border-0 shadow-sm p-4 bg-success bg-opacity-10 text-center">
+                    <div class="d-flex align-items-center justify-content-center flex-wrap">
+                        <i class="bi bi-shield-check fs-2 text-success me-3"></i>
+                        <h5 class="fw-bold text-success-emphasis mb-0">Ausgezeichnete Medienscouts-Schule gegen Cybermobbing</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-auto text-center">
+        <div class="container">
+            <h5 class="fw-bold mb-3">Konrad-Adenauer-Gymnasium Meckenheim</h5>
+            <p class="small text-white-50 mb-4">Königsberger Straße 30 | 53340 Meckenheim</p>
+            <div class="small text-white-50">
+                <a href="#" class="text-white-50 text-decoration-none mx-2">Impressum</a>
+                <a href="#" class="text-white-50 text-decoration-none mx-2">Datenschutz</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

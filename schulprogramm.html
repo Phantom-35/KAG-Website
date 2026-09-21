@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schulprogramm | KAG Meckenheim</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    
+    <style>
+        :root { --school-blue: #1a4a7f; }
+        .bg-school-primary { background-color: var(--school-blue); }
+        .text-school-primary { color: var(--school-blue); }
+        .btn-primary { background-color: var(--school-blue); border-color: var(--school-blue); }
+        
+        .dropdown-menu { border: none; border-top: 3px solid var(--school-blue); min-width: 280px; }
+        .dropdown-header { text-transform: uppercase; font-weight: 700; font-size: 0.75rem; color: #6c757d; padding: 0.75rem 1.25rem 0.4rem; }
+        .dropdown-item i { width: 1.5rem; margin-right: 0.5rem; }
+
+        .accordion-button:not(.collapsed) {
+            background-color: #f8f9fa;
+            color: var(--school-blue);
+            font-weight: bold;
+        }
+        .prog-icon { font-size: 1.5rem; margin-right: 1rem; color: var(--school-blue); }
+    </style>
+</head>
+<body class="d-flex flex-column min-vh-100 bg-light">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-school-primary sticky-top shadow">
+    <div class="container">
+        <a class="navbar-brand fw-bold" href="index.html">
+            <i class="bi bi-mortarboard-fill me-2"></i> KAG Meckenheim
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link active" href="index.html">Startseite</a></li>
+                
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="schuleDropdown" role="button" data-bs-toggle="dropdown">Unsere Schule</a>
+                    <ul class="dropdown-menu shadow-lg mt-2">
+                        <li><h6 class="dropdown-header">Allgemeines</h6></li>
+                        <li><a class="dropdown-item" href="unsere-schule.html"><i class="bi bi-info-circle text-primary"></i> Übersicht & Profil</a></li>
+                        <li><a class="dropdown-item" href="schulprogramm.html"><i class="bi bi-file-earmark-text text-primary"></i> Schulprogramm</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Förderung & Beratung</h6></li>
+                        <li><a class="dropdown-item" href="foerdern-und-fordern.html"><i class="bi bi-magic text-primary"></i> Fördern & Fordern</a></li>
+                        <li><a class="dropdown-item" href="beratung-und-hilfe.html"><i class="bi bi-chat-dots text-primary"></i> Beratung & Hilfe</a></li>
+                        <li><a class="dropdown-item" href="gesunde-schule.html"><i class="bi bi-heart-pulse text-primary"></i> Gesunde Schule</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Aktivitäten</h6></li>
+                        <li><a class="dropdown-item" href="theater-xxl.html"><i class="bi bi-palette text-primary"></i> Theater XXL</a></li>
+                        <li><a class="dropdown-item" href="ags.html"><i class="bi bi-controller text-primary"></i> AGs</a></li>
+                        <li><a class="dropdown-item" href="fahrtenkonzept.html"><i class="bi bi-bus-front text-primary"></i> Fahrtenkonzept</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown">Unterricht & Personen</a>
+                    <ul class="dropdown-menu shadow-lg border-0 mt-2">
+                        <li><h6 class="dropdown-header">Bildungsgänge</h6></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-book text-primary"></i> Erprobungsstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-journal-text text-primary"></i> Mittelstufe</a></li>
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-mortarboard text-primary"></i> Oberstufe</a></li>
+                        <li><hr class="dropdown-divider"></li>
+                        <li><h6 class="dropdown-header">Menschen am KAG</h6></li>
+                        <li><a class="dropdown-item" href="schulleitung.html"><i class="bi bi-person-badge-fill text-primary"></i> Schulleitung</a></li>
+                        <li><a class="dropdown-item" href="sekretariat.html"><i class="bi bi-headset text-primary"></i> Sekretariat</a></li>
+                        <li><a class="dropdown-item" href="kollegium.html"><i class="bi bi-people-fill text-primary"></i> Kollegium</a></li>
+                        <li><a class="dropdown-item" href="sv.html"><i class="bi bi-backpack text-primary"></i> SV (Schülervertretung)</a></li>
+                        <li><a class="dropdown-item" href="förderverein.html"><i class="bi bi-hand-thumbs-up text-primary"></i> Förderverein</a></li>
+                        <li><a class="dropdown-item" href="schulpflegschaft.html"><i class="bi bi-person-video3 text-primary"></i> Schulpflegschaft</a></li>
+                    </ul>
+                </li>
+
+                <li class="nav-item"><a class="nav-link" href="#">Termine</a></li>
+                <li class="nav-item"><a class="nav-link" href="#">Kontakt</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+    <header class="bg-white border-bottom py-5 mb-5 shadow-sm">
+        <div class="container text-center">
+            <h1 class="display-4 fw-bold text-school-primary">Schulprogramm</h1>
+            <p class="lead text-muted">Grundlagen, Ziele und Konzepte unserer pädagogischen Arbeit</p>
+        </div>
+    </header>
+
+    <main class="container mb-5">
+        <div class="row">
+            <div class="col-lg-10 mx-auto">
+                
+                <div class="accordion shadow-sm" id="accordionProgram">
+                    
+                    <div class="accordion-item border-0 mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne">
+                                <i class="bi bi-compass prog-icon"></i> 1. Leitbild & Pädagogische Grundorientierung
+                            </button>
+                        </h2>
+                        <div id="collapseOne" class="accordion-collapse collapse show" data-bs-parent="#accordionProgram">
+                            <div class="accordion-body bg-white">
+                                <p>Das Konrad-Adenauer-Gymnasium versteht sich als Ort des gemeinsamen Lernens und Lebens. Unsere Arbeit basiert auf drei Säulen:</p>
+                                <ul>
+                                    <li><strong>Respekt:</strong> Wertschätzender Umgang zwischen Schülern, Lehrern und Eltern.</li>
+                                    <li><strong>Verantwortung:</strong> Erziehung zu mündigen Bürgern in einer demokratischen Gesellschaft.</li>
+                                    <li><strong>Leistung:</strong> Individuelle Förderung zur Entfaltung persönlicher Potenziale.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo">
+                                <i class="bi bi-book prog-icon"></i> 2. Unterrichtsentwicklung & Qualität
+                            </button>
+                        </h2>
+                        <div id="collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionProgram">
+                            <div class="accordion-body bg-white">
+                                <p>Wir setzen auf moderne Unterrichtsformen und die digitale Transformation:</p>
+                                <ul>
+                                    <li>Implementierung von Tablet-Klassen ab der Mittelstufe.</li>
+                                    <li>Kooperative Lernformen zur Stärkung der Teamfähigkeit.</li>
+                                    <li>Regelmäßige Fortbildung des Kollegiums nach dem Referenzrahmen Schulqualität.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree">
+                                <i class="bi bi-house-heart prog-icon"></i> 3. Ganztag & Lebensraum Schule
+                            </button>
+                        </h2>
+                        <div id="collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionProgram">
+                            <div class="accordion-body bg-white">
+                                <p>Als gebundenes Ganztagsgymnasium bieten wir einen rhythmisierten Schultag:</p>
+                                <ul>
+                                    <li>Mittagsfreizeit mit Mensabetrieb und Spielangeboten.</li>
+                                    <li>Lernzeiten zur Unterstützung der Hausaufgaben innerhalb der Schulzeit.</li>
+                                    <li>Vielfältiges AG-Angebot in Sport, Musik und Technik.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item border-0 mb-2">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed rounded" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour">
+                                <i class="bi bi-cpu prog-icon"></i> 4. Schwerpunkte: MINT & Kultur
+                            </button>
+                        </h2>
+                        <div id="collapseFour" class="accordion-collapse collapse" data-bs-parent="#accordionProgram">
+                            <div class="accordion-body bg-white">
+                                <p>Besondere Profilbildung in den Bereichen:</p>
+                                <ul>
+                                    <li><strong>MINT:</strong> Teilnahme an Wettbewerben, Informatik-Profil und Kooperationen mit Firmen.</li>
+                                    <li><strong>Kultur:</strong> Legendäres „Theater XXL“, Chöre, Orchester und Kunst-Exkursionen.</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <div class="mt-5 p-4 bg-white border rounded shadow-sm d-flex align-items-center justify-content-between">
+                    <div>
+                        <h5 class="fw-bold mb-1">Vollständiges Schulprogramm</h5>
+                        <p class="text-muted small mb-0">Das gesamte Dokument (Stand 2026) als PDF zum Download.</p>
+                    </div>
+                    <a href="#" class="btn btn-primary"><i class="bi bi-file-earmark-pdf me-2"></i>Download PDF</a>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <footer class="bg-dark text-white py-5 mt-auto text-center">
+        <div class="container">
+            <h5 class="fw-bold mb-2">Konrad-Adenauer-Gymnasium Meckenheim</h5>
+            <p class="small text-white-50">© 2026 KAG Meckenheim</p>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
